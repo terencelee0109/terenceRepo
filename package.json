@@ -1,0 +1,48 @@
+{
+  "id": "testService",
+  "name": "terenceonlyservice",
+  "description": "testService",
+  "displayName": "testService",
+  "version": "0.0.1",
+  "publisher": "terencelee0109",
+  "engines": {
+    "HBuilderX": "^2.7.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension",
+  "activationEvents": [
+    "onCommand:extension.helloWorld"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.helloWorld",
+        "title": "Hello World"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "extension.helloWorld",
+          "group": "z_commands",
+          "when": "editorTextFocus"
+        },
+        {
+          "group": "z_commands"
+        }
+      ]
+    }
+  },
+  "extensionDependencies": [
+    "plugin-manager"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^5.66.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
