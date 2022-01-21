@@ -11,6 +11,11 @@
 function deactivate() {
 	console.log('from extension')
 }
+
+function updatedTest() {
+	console.log('updated to v0.0.2')
+}
+
 module.exports = {
 	// activate,
 	deactivate

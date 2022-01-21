@@ -3,7 +3,7 @@
   "name": "terenceonlyservice",
   "description": "testService",
   "displayName": "testService",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "terencelee0109",
   "engines": {
     "HBuilderX": "^2.7.0"
