@@ -29,7 +29,7 @@ function detectPlatform(userAgent) {
 		WEB: window.navigator.userAgent */ 
 	var md = new mobileDetector(userAgent);
 	
-	return platformInfo = {
+	return {
 		"mobile" : md.mobile(),
 		"phone" : md.phone(),
 		"tablet" : md.tablet(),
@@ -41,6 +41,7 @@ function detectPlatform(userAgent) {
 		"versionStr" : md.versionStr('Build'),
 		"match" : md.match('playstation|xbox')
 	}
+	
 	// console.log( md.mobile() );    
 	// console.log( md.phone() );     
 	// console.log( md.tablet() );    
