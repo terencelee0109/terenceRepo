@@ -10,6 +10,7 @@
 //该方法将在插件禁用的时候调用（目前是在插件卸载的时候触发）
 
 import mobileDetector from "mobile-detect"
+import {isMobile} from 'react-device-detect';
 
 function deactivate() {
 	console.log('from extension')
@@ -23,8 +24,12 @@ function detectPlatform() {
 	console.log('mobileDetector', mobileDetector.mobile())
 }
 
+function reactDetectPlatform(){
+	console.log('mobileDetector', isMobile)
+}
 module.exports = {
 	deactivate,
 	updatedTest,
-	detectPlatform
+	detectPlatform,
+	
 }

@@ -39,7 +39,8 @@
     "plugin-manager"
   ],
   "dependencies": {
-    "mobile-detect": "^1.4.5"
+    "mobile-detect": "^1.4.5",
+    "react-device-detect": "^2.1.2"
   },
   "devDependencies": {
     "webpack": "^5.66.0"
