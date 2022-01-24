@@ -20,18 +20,37 @@ function updatedTest() {
 }
 
 function detectPlatform(userAgent) {
+	/*  
+	userAgent:
+	//for iPad/Tablet/Mobile Devices
+		APP: plus.navigator.getUserAgent()
+		
+	//for web broswer
+		WEB: window.navigator.userAgent */ 
 	var md = new mobileDetector(userAgent);
 	
-	console.log( md.mobile() );    
-	console.log( md.phone() );     
-	console.log( md.tablet() );    
-	console.log( md.userAgent() ); 
-	console.log( md.os() );        
-	console.log( md.is('iPhone') );
-	console.log( md.is('bot') );   
-	console.log( md.version('Webkit') );   
-	console.log( md.versionStr('Build') ); 
-	console.log( md.match('playstation|xbox') );
+	return platformInfo = {
+		"mobile" : md.mobile()
+		"phone" : md.phone()
+		"tablet" : md.tablet()
+		"userAgent" : md.userAgent()
+		"os" : md.os()
+		"is" : md.is('iPhone')
+		"is" : md.is('bot')
+		"version" : md.version('Webkit')
+		"versionStr" : md.versionStr('Build')
+		"match" : md.match('playstation|xbox')
+	}
+	// console.log( md.mobile() );    
+	// console.log( md.phone() );     
+	// console.log( md.tablet() );    
+	// console.log( md.userAgent() ); 
+	// console.log( md.os() );        
+	// console.log( md.is('iPhone') );
+	// console.log( md.is('bot') );   
+	// console.log( md.version('Webkit') );   
+	// console.log( md.versionStr('Build') ); 
+	// console.log( md.match('playstation|xbox') );
 }
 
 // function reactDetectPlatform(){
