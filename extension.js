@@ -10,8 +10,6 @@
 //该方法将在插件禁用的时候调用（目前是在插件卸载的时候触发）
 
 import mobileDetector from "mobile-detect"
-import {isMobile} from 'react-device-detect';
-import VueMobileDetection from 'vue-mobile-detection'
 
 function deactivate() {
 	console.log('from extension')
@@ -21,21 +19,31 @@ function updatedTest() {
 	console.log('updated to v0.0.7')
 }
 
-function detectPlatform() {
-	console.log('mobileDetector', mobileDetector.mobile())
+function detectPlatform(userAgent) {
+	var md = new mobileDetector(userAgent);
+	
+	console.log( md.mobile() );    
+	console.log( md.phone() );     
+	console.log( md.tablet() );    
+	console.log( md.userAgent() ); 
+	console.log( md.os() );        
+	console.log( md.is('iPhone') );
+	console.log( md.is('bot') );   
+	console.log( md.version('Webkit') );   
+	console.log( md.versionStr('Build') ); 
+	console.log( md.match('playstation|xbox') );
 }
 
-function reactDetectPlatform(){
-	console.log('react-mobileDetector', isMobile)
-}
+// function reactDetectPlatform(){
+// 	console.log('react-mobileDetector', isMobile)
+// }
 
-function vueDetectPlatform(){
-	console.log('vue-mobileDetector', VueMobileDetection.isMobile)
-}
+// function vueDetectPlatform(){
+// 	console.log('vue-mobileDetector', VueMobileDetection.isMobile)
+// }
 
 module.exports = {
 	deactivate,
 	updatedTest,
-	detectPlatform,
-	reactDetectPlatform
+	detectPlatform
 }
