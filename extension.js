@@ -8,15 +8,23 @@
 // 	context.subscriptions.push(disposable);
 // }
 //该方法将在插件禁用的时候调用（目前是在插件卸载的时候触发）
+
+import mobileDetector from "mobile-detect"
+
 function deactivate() {
 	console.log('from extension')
 }
 
 function updatedTest() {
-	console.log('updated to v0.0.2')
+	console.log('updated to v0.0.3')
+}
+
+function detectPlatform() {
+	console.log('mobileDetector', mobileDetector.mobile())
 }
 
 module.exports = {
-	// activate,
-	deactivate
+	deactivate,
+	updatedTest,
+	detectPlatform
 }
