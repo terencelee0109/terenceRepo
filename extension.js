@@ -11,13 +11,14 @@
 
 import mobileDetector from "mobile-detect"
 import {isMobile} from 'react-device-detect';
+import VueMobileDetection from 'vue-mobile-detection'
 
 function deactivate() {
 	console.log('from extension')
 }
 
 function updatedTest() {
-	console.log('updated to v0.0.3')
+	console.log('updated to v0.0.7')
 }
 
 function detectPlatform() {
@@ -25,11 +26,16 @@ function detectPlatform() {
 }
 
 function reactDetectPlatform(){
-	console.log('mobileDetector', isMobile)
+	console.log('react-mobileDetector', isMobile)
 }
+
+function vueDetectPlatform(){
+	console.log('vue-mobileDetector', VueMobileDetection.isMobile)
+}
+
 module.exports = {
 	deactivate,
 	updatedTest,
 	detectPlatform,
-	
+	reactDetectPlatform
 }

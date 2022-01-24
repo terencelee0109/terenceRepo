@@ -42,7 +42,8 @@
     "mobile-detect": "^1.4.5",
     "react": "^17.0.2",
     "react-device-detect": "^2.1.2",
-    "react-import": "^1.5.3"
+    "react-import": "^1.5.3",
+    "vue-mobile-detection": "^2.0.1"
   },
   "devDependencies": {
     "webpack": "^5.66.0"
