@@ -30,15 +30,15 @@ function detectPlatform(userAgent) {
 	var md = new mobileDetector(userAgent);
 	
 	return platformInfo = {
-		"mobile" : md.mobile()
-		"phone" : md.phone()
-		"tablet" : md.tablet()
-		"userAgent" : md.userAgent()
-		"os" : md.os()
-		"is" : md.is('iPhone')
-		"is" : md.is('bot')
-		"version" : md.version('Webkit')
-		"versionStr" : md.versionStr('Build')
+		"mobile" : md.mobile(),
+		"phone" : md.phone(),
+		"tablet" : md.tablet(),
+		"userAgent" : md.userAgent(),
+		"os" : md.os(),
+		"is" : md.is('iPhone'),
+		"is" : md.is('bot'),
+		"version" : md.version('Webkit'),
+		"versionStr" : md.versionStr('Build'),
 		"match" : md.match('playstation|xbox')
 	}
 	// console.log( md.mobile() );    
