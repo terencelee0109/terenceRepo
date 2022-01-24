@@ -40,7 +40,8 @@
   ],
   "dependencies": {
     "mobile-detect": "^1.4.5",
-    "react-device-detect": "^2.1.2"
+    "react-device-detect": "^2.1.2",
+    "react-import": "^1.5.3"
   },
   "devDependencies": {
     "webpack": "^5.66.0"
