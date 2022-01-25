@@ -10,8 +10,9 @@
 //该方法将在插件禁用的时候调用（目前是在插件卸载的时候触发）
 
 import mobileDetector from "mobile-detect"
-import userService from "./src/user/user.js"
-import productService from "./src/product/product.js"
+// import * as userService from "./src/user/user.js"
+import {userClass as user } from "./src/user/user.js"
+import {productClass as product } from "./src/product/product.js"
 
 function deactivate() {
 	console.log('from extension')
@@ -64,5 +65,7 @@ function detectPlatform(userAgent) {
 module.exports = {
 	deactivate,
 	updatedTest,
-	detectPlatform
+	detectPlatform,
+	user,
+	product
 }
