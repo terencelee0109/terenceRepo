@@ -10,7 +10,6 @@
 //该方法将在插件禁用的时候调用（目前是在插件卸载的时候触发）
 
 import mobileDetector from "mobile-detect"
-// import * as userService from "./src/user/user.js"
 import {userClass as user } from "./src/user/user.js"
 import {productClass as product } from "./src/product/product.js"
 
