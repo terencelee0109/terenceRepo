@@ -10,6 +10,8 @@
 //该方法将在插件禁用的时候调用（目前是在插件卸载的时候触发）
 
 import mobileDetector from "mobile-detect"
+import userService from "./src/user/user.js"
+import productService from "./src/product/product.js"
 
 function deactivate() {
 	console.log('from extension')
@@ -20,13 +22,10 @@ function updatedTest() {
 }
 
 function detectPlatform(userAgent) {
-	/*  
-	userAgent:
-	//for iPad/Tablet/Mobile Devices
-		APP: plus.navigator.getUserAgent()
-		
-	//for web broswer
-		WEB: window.navigator.userAgent */ 
+	/* userAgent */
+	/* for APP (iPad/Tablet/Mobile Devices) : plus.navigator.getUserAgent() */
+	/* for WEB: window.navigator.userAgent */ 
+	
 	var md = new mobileDetector(userAgent);
 	
 	return {
